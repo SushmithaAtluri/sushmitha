@@ -1,0 +1,288 @@
+getting started with jupyter
+getting started with python
+In [1]:
+# comment starts with a #
+In [2]:
+import pandas as pd
+In [ ]:
+help ()# try "pandas" and then "quit"
+Welcome to Python 3.7's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at https://docs.python.org/3.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+list of commands
+list 1
+list 2
+
+In [1]:
+x = 3
+In [2]:
+type(x)
+Out[2]:
+int
+In [3]:
+x = 5.2
+In [4]:
+type(x)
+Out[4]:
+float
+In [5]:
+x ="string"
+In [6]:
+type (x)
+Out[6]:
+str
+variable declaration & printing
+In [8]:
+var1 = 2
+var2 = 5.7
+In [9]:
+var1
+Out[9]:
+2
+In [10]:
+var2
+Out[10]:
+5.7
+In [11]:
+type(var1)
+Out[11]:
+int
+In [12]:
+type(var2)
+Out[12]:
+float
+In [13]:
+# printing the value
+print (var1)
+2
+In [14]:
+print (var2)
+5.7
+In [15]:
+mystring= "MLAP SESSION"
+In [16]:
+mystring1 = "This is 6th session"
+In [17]:
+print (mystring)
+MLAP SESSION
+In [18]:
+print (mystring1)
+This is 6th session
+operations in python
+In [19]:
+var1+var2
+Out[19]:
+7.7
+In [20]:
+var1*var2
+Out[20]:
+11.4
+In [22]:
+var1 == 2
+Out[22]:
+True
+In [23]:
+var1 ==var2
+Out[23]:
+False
+built in functions
+In [24]:
+round(2.6547)
+Out[24]:
+3
+In [25]:
+round(2.6475,2)
+Out[25]:
+2.65
+In [26]:
+import math
+In [27]:
+math.ceil(1.2)
+Out[27]:
+2
+In [28]:
+math.floor(1.2)
+Out[28]:
+1
+In [29]:
+pow (var1,4)
+Out[29]:
+16
+In [30]:
+#generate sequence
+In [31]:
+num = range(1,10)
+In [32]:
+num
+Out[32]:
+range(1, 10)
+In [33]:
+type(num)
+Out[33]:
+range
+In [35]:
+for i in num:
+    print (i)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+In [36]:
+len (num)
+Out[36]:
+9
+In [37]:
+for i in num:
+        print (i, end = "") # print horizontally
+123456789
+
+conditional formats
+In [1]:
+var1 = 3
+var2 = 5.0
+In [2]:
+if var1>1:
+    print ("var1 is a bigger number")
+var1 is a bigger number
+In [3]:
+if var1>1:
+    print ("bigger")
+else:
+    print ("smnaller")
+bigger
+In [4]:
+var1 = 0
+In [7]:
+x=10
+y=12
+if x > y:
+    print ("x>y")
+elif x < y:
+    print ("x<y")
+else:
+    print ("x=y")
+x<y
+In [8]:
+a=0 if x>10 else 1
+In [9]:
+a
+Out[9]:
+1
+control flow statements
+In [10]:
+for i in range(5):
+    print(i)
+0
+1
+2
+3
+4
+
+i=1
+while i<5:
+    print (i)
+    i= i+1
+print ("bye")
+
+i=1
+while i<5:
+    print (i)
+    i= i+1
+    if i == 4:
+        break
+print('bye')
+while i<5:
+    print (i)
+    i= i+1
+    if i == 4:
+        break
+print('bye')
+i=1
+while i<5:
+    print (i)
+    i= i+1
+    if i == 4:
+        break
+print('bye')
+i=1
+while i<5:
+    print (i)
+    i= i+1
+    if i == 4:
+        break
+print('bye')
+1
+2
+3
+bye
+
+collections
+In [4]:
+# list - []- square brackets hetereogenous data- mutable- changeable values
+# Tuple -()- round braces- hetro data - immutable- unchangeable values
+In [5]:
+list1 = ["computer","ptinter", "TV", "camera", 89, 30.8]
+In [6]:
+list1
+Out[6]:
+['computer', 'ptinter', 'TV', 'camera', 89, 30.8]
+In [7]:
+tuple1 = ("computer","ptinter", "TV", "camera", 89, 30.8)
+In [8]:
+tuple1
+Out[8]:
+('computer', 'ptinter', 'TV', 'camera', 89, 30.8)
+In [9]:
+list1 [0] = "PC"
+In [10]:
+list1
+Out[10]:
+['PC', 'ptinter', 'TV', 'camera', 89, 30.8]
+In [11]:
+tuple [0] = "PC"
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-11-6b9ec18e373f> in <module>
+----> 1 tuple [0] = "PC"
+
+TypeError: 'type' object does not support item assignment
+In [12]:
+# sets - ()- ordered list of non-repeated items
+In [15]:
+set1 = set(["computer","printer", "TV", "camera", 89, 30.8])
+In [16]:
+set1
+Out[16]:
+{30.8, 89, 'TV', 'camera', 'computer', 'printer'}
+In [19]:
+set1 = set(["computer","printer", "TV", "camera", 89, 30.8, "camera"])
+In [20]:
+set1
+Out[20]:
+{30.8, 89, 'TV', 'camera', 'computer', 'printer'}
+In [21]:
+# dictionary - {}- key:pair. alphabets- english letters. (word-meaning)
+In [22]:
+# dictionary. key- immutable(not changeable). value: mutable/changeable
+In [23]:
+dict1 = {"monday" :1, "tuesday" :2, "wednesday" :3}
+In [24]:
+dict1
+Out[24]:
+{'monday': 1, 'tuesday': 2, 'wednesday': 3}
